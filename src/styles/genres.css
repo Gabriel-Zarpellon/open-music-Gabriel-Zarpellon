@@ -1,1 +1,14 @@
 /* Estilizações Gêneros */
+#genre-section {
+  margin-top: 11.25rem;
+  width: 100%;
+  max-width: 64rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#genre-section__genre-list {
+  display: flex;
+  gap: 1.5625rem;
+}

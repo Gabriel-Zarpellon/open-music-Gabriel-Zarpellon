@@ -8,6 +8,10 @@ header {
   justify-content: space-between;
   padding-block: 1.875rem;
   max-width: 64rem;
+  background-color: var(--gray-color-8);
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
 }
 
 #theme-button {
