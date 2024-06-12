@@ -2,7 +2,6 @@
 #genre-section {
   margin-top: 11.25rem;
   width: 100%;
-  max-width: 64rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -11,4 +10,17 @@
 #genre-section__genre-list {
   display: flex;
   gap: 1.5625rem;
+}
+
+.genre-list__button{
+    width: fit-content;
+    height: 2rem;
+    padding-inline: .6375rem;
+    border-radius: .25rem;
+    background-color: var(--gray-color-6);
+}
+
+.genre-list__button:hover{
+    background-color: var(--gray-color-2);
+    color: var(--gray-color-7);
 }
