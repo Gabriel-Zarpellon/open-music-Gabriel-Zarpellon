@@ -4,28 +4,100 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open Music</title>
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/header.css">
   </head>
   <body>
     <!-- CABEÇALHO -->
     <header>
-      <!-- DESENVOLVA AQUI OS ELEMENTOS DO CABEÇALHO -->
+      <h1><span>o</span>pen <span>m</span>usic</h1>
+      <button id="theme-button"></button>
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
       <!-- SEÇÃO DE FILTRO POR GENERO -->
       <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+        <h2>Gênero Musical</h2>
+        <ul>
+          <li>Todos</li>
+          <li>Pop</li>
+          <li>MPB</li>
+          <li>Forró</li>
+          <li>Samba</li>
+          <li>Baião</li>
+          <li>Rap</li>
+          <li>Hip-Hop</li>
+        </ul>
       </section>
 
       <!-- SEÇÃO DE FILTRO POR PREÇO -->
       <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+        <h2>Definir Preço</h2>
+        <h3>Até <span>R$ 100</span></h3>
+        <input
+          type="range"
+          id="price-range"
+          name="price-range"
+          min="0"
+          max="100"
+        />
       </section>
 
       <!-- SEÇÃO DE ALBUNS -->
       <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+        <h3>Álbuns Encontrados</h3>
+        <ul>
+          <li>
+            <img src="./src/assets/imgs/cover-1.jpg" alt="Acabou O Chorare Album Cover"/>
+            <h3>Acabou O Chorare</h3>
+            <p>Novos Baianos</p>
+            <p>MPB</p>
+            <p>R$ 137,91</p>
+            <button>Comprar</button>
+          </li>
+          <li>
+            <img src="./src/assets/imgs/cover-2.jpg" alt="The Wall Album Cover" />
+            <h3>The Wall</h3>
+            <p>Pink Floyd</p>
+            <p>Rock</p>
+            <p>R$ 123,56</p>
+            <button>Comprar</button>
+          </li>
+          <li>
+            <img src="./src/assets/imgs/cover-3.jpg" alt="To Pimp A Butterfly Album Cover"/>
+            <h3>To Pimp A Butterfly</h3>
+            <p>Kendrick Lamar</p>
+            <p>Rap</p>
+            <p>R$ 102,66</p>
+            <button>Comprar</button>
+          </li>
+          <li>
+            <img src="./src/assets/imgs/cover-1.jpg" alt="Acabou O Chorare Album Cover"/>
+            <h3>Acabou O Chorare</h3>
+            <p>Novos Baianos</p>
+            <p>MPB</p>
+            <p>R$ 137,91</p>
+            <button>Comprar</button>
+          </li>
+          <li>
+            <img src="./src/assets/imgs/cover-2.jpg" alt="The Wall Album Cover" />
+            <h3>The Wall</h3>
+            <p>Pink Floyd</p>
+            <p>Rock</p>
+            <p>R$ 123,56</p>
+            <button>Comprar</button>
+          </li>
+          <li>
+            <img src="./src/assets/imgs/cover-3.jpg" alt="To Pimp A Butterfly Album Cover"/>
+            <h3>To Pimp A Butterfly</h3>
+            <p>Kendrick Lamar</p>
+            <p>Rap</p>
+            <p>R$ 102,66</p>
+            <button>Comprar</button>
+          </li>
+        </ul>
       </section>
     </main>
   </body>
