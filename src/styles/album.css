@@ -1,1 +1,66 @@
 /* Estilizações Álbuns */
+#album-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.625rem;
+}
+
+.album-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+.album-list__card {
+  width: 19.25rem;
+  height: 28.4375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: var(--gray-color-7);
+  border-radius: 0.25rem;
+  flex-grow: 1;
+}
+
+.album-list__card:hover {
+  background-color: var(--gray-color-6);
+}
+
+img {
+  object-fit: cover;
+  border-radius: .25rem .25rem 0 0;
+}
+
+.album-name {
+  padding-left: 0.625rem;
+}
+.card-top,
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 0.625rem;
+  color: var(--gray-color-3);
+}
+
+.card-bottom {
+  margin-top: 0.75rem;
+}
+.card-bottom p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-color-2);
+}
+
+.buy-button {
+  background-color: var(--brand-color-2);
+  color: #fff;
+  padding: 0.625rem 0.5rem;
+  border-style: none;
+  border-radius: 0.25rem;
+}
+
+.buy-button:hover {
+  background-color: var(--brand-color-1);
+}

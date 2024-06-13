@@ -18,20 +18,20 @@
 }
 
 body {
-    font-family: "Inter", sans-serif;
-    background-color: var(--gray-color-8);
-    padding-inline: 1.875rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  font-family: "Inter", sans-serif;
+  background-color: var(--gray-color-8);
+  padding-inline: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-main{
-    width: 64rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 100%
+main {
+  width: 64rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5.125rem;
+  max-width: 100%;
 }
 
 span {
@@ -48,6 +48,15 @@ h2 {
   font-weight: 600;
 }
 
+h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+p{
+  font-size: 1rem;
+  font-weight: 400;
+}
 button {
   font-family: inherit;
   font-size: 1rem;
