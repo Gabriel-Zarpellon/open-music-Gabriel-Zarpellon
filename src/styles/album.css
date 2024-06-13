@@ -12,7 +12,7 @@
     gap: 1.25rem;
 }
 
-.album-list__card {
+.album-list li {
   width: 19.25rem;
   height: 28.4375rem;
   display: flex;
@@ -27,12 +27,12 @@
   background-color: var(--gray-color-6);
 }
 
-img {
+.album-list li img {
   object-fit: cover;
   border-radius: .25rem .25rem 0 0;
 }
 
-.album-name {
+.album-list li h3 {
   padding-left: 0.625rem;
 }
 .card-top,
