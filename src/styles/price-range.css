@@ -1,34 +1,33 @@
 /* Estilizações Preços */
 #range-input {
-    -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-    cursor: pointer;
-    width: 99.8%;
-    outline: none;
-    background-color: var(--brand-color-1);
-    border-radius: 0.5rem;
-    height: 0.5rem;
-  }
-  
-  #range-input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    height: 30px;
-    width: 30px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: 0.5rem solid var(--brand-color-1);
-  }
-
-#price-filter-section{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2.625rem;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 99.8%;
+  outline: none;
+  background-color: var(--brand-color-1);
+  border-radius: 0.5rem;
+  height: 0.5rem;
 }
-#price-filter-section__top{
-    display: flex;
-    justify-content: space-between;
 
+#range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 0.5rem solid var(--brand-color-1);
+}
+
+#price-filter-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.625rem;
+}
+#price-filter-section__top {
+  display: flex;
+  justify-content: space-between;
 }
