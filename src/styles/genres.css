@@ -1,10 +1,14 @@
 /* Estilizações Gêneros */
-#genre-section {
+.genre-section {
   margin-top: 11.25rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 3.25rem;
+}
+
+.genre-section h2 {
+  color: var(--gray-color-2);
 }
 
 #genre-section__genre-list {
@@ -34,5 +38,26 @@
 
 .genre-input:hover + .genre-label {
   border: 0.0625rem solid var(--gray-color-2);
+  cursor: pointer;
+}
+
+/* Classes Dark Theme */
+
+.genre-section--dark h2 {
+  color: var(--gray-color-7);
+}
+
+.genre-label--dark {
+  background-color: var(--gray-color-2);
+  color: var(--gray-color-6);
+}
+
+.genre-input--dark:checked + .genre-label--dark {
+  background-color: var(--gray-color-7);
+  color: var(--gray-color-2);
+}
+
+.genre-input--dark:hover + .genre-label--dark {
+  border: 0.0625rem solid var(--gray-color-7);
   cursor: pointer;
 }

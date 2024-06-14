@@ -1,5 +1,5 @@
 /* Estilizações Álbuns */
-#album-section {
+.album-section {
   display: flex;
   flex-direction: column;
   gap: 2.625rem;
@@ -36,19 +36,25 @@
 
 .album-list__card h3 {
   padding-left: 0.625rem;
+  color: var(--gray-color-2);
 }
+
 .card-top,
 .card-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: 0.625rem;
+}
+
+.card-top p {
   color: var(--gray-color-3);
 }
 
 .card-bottom {
   margin-top: 0.75rem;
 }
+
 .card-bottom p {
   font-size: 1.25rem;
   font-weight: 600;
@@ -65,4 +71,26 @@
 
 .buy-button:hover {
   background-color: var(--brand-color-1);
+}
+
+/* Classes Dark Theme */
+.album-section--dark h2,
+.album-section--dark h3 {
+  color: var(--gray-color-7);
+}
+
+.album-section--dark .album-list__card {
+  background-color: var(--gray-color-2);
+}
+
+.album-section--dark .album-list__card:hover {
+  background-color: var(--gray-color-3);
+}
+
+.album-section--dark .card-top p {
+  color: var(--gray-color-6);
+}
+
+.album-section--dark .card-bottom p {
+  color: var(--gray-color-7);
 }

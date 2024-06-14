@@ -1,10 +1,13 @@
 /* Script Global */
 import { applyInputRangeStyle } from "./inputRange.js";
 import { albumList } from "./albumsDatabase.js";
+import { themeChange, themeCheck } from "./theme.js";
 
 function routine() {
   applyInputRangeStyle();
   renderCardItems(albumList);
+  priceFilter(albumList);
+  themeCheck();
 }
 
 routine();
@@ -50,4 +53,23 @@ function createAlbumCard(albumListItem) {
   buyButton.innerText = "Comprar";
 
   return card;
+}
+
+let themeButton = document.querySelector(".theme-button");
+
+themeButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  themeChange();
+});
+
+function priceFilter(list) {
+  let price = document.querySelector("#price");
+  let rangeInput = document.querySelector("#range-input");
+
+  rangeInput.addEventListener("input", () => {
+    price.innerText = `R$ ${rangeInput.value}`;
+    let albumsInPriceRange = list.filter((element) => parseInt(element.price) <= rangeInput.value);
+
+    return renderCardItems(albumsInPriceRange);
+  });
 }

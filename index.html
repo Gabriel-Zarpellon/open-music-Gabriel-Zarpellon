@@ -14,15 +14,15 @@
   </head>
   <body>
     <!-- CABEÇALHO -->
-    <header>
+    <header class="header">
       <h1><span>o</span>pen <span>m</span>usic</h1>
-      <button id="theme-button"></button>
+      <button class="theme-button"></button>
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
       <!-- SEÇÃO DE FILTRO POR GENERO -->
-      <section id="genre-section">
+      <section class="genre-section">
         <h2>Gênero Musical</h2>
         <ul id="genre-section__genre-list">
           <li>
@@ -38,8 +38,8 @@
             <label class="genre-label" for="mpb">MPB</label>
           </li>
           <li>
-            <input type="radio" class="genre-input" id="forro" name="genre-radio" value="forro" />
-            <label class="genre-label" for="forro">Forró</label>
+            <input type="radio" class="genre-input" id="forró" name="genre-radio" value="forró" />
+            <label class="genre-label" for="forró">Forró</label>
           </li>
           <li>
             <input type="radio" class="genre-input" id="samba" name="genre-radio" value="samba" />
@@ -62,21 +62,21 @@
 
       <!-- SEÇÃO DE FILTRO POR PREÇO -->
       <section id="price-filter-section">
-        <div id="price-filter-section__top">
+        <div class="price-filter-section__top">
         <h2>Definir Preço</h2>
-        <h3>Até <span>R$ 100</span></h3>
+        <h3>Até <span id="price">R$ 150</span></h3>
       </div>
         <input id="range-input"
           type="range"
           name="price-range"
           min="0"
-          max="100"
+          max="150"
         />
       </section>
 
       <!-- SEÇÃO DE ALBUNS -->
-      <section id="album-section">
-        <h3>Álbuns Encontrados</h3>
+      <section class="album-section">
+        <h2>Álbuns Encontrados</h2>
         <ul class="album-list">
           <li class="album-list__card">
             <img src="./src/assets/imgs/cover-1.jpg" alt="Acabou O Chorare Album Cover"/>
@@ -115,7 +115,7 @@
           </div>
         </li>
           <li class="album-list__card">
-            <img src="./src/assets/imgs/cover-1.jpg" alt="Acabou O Chorare Album Cover"/>
+            <img src="./src/assets/imgs/cover-4.jpg" alt="Acabou O Chorare Album Cover"/>
             <h3>Acabou O Chorare</h3>
             <div class="card-top">
             <p>Novos Baianos</p>
@@ -127,7 +127,7 @@
           </div>
         </li>
           <li class="album-list__card">
-            <img src="./src/assets/imgs/cover-2.jpg" alt="The Wall Album Cover" />
+            <img src="./src/assets/imgs/cover-5.jpg" alt="The Wall Album Cover" />
             <h3>The Wall</h3>
             <div class="card-top">
             <p>Pink Floyd</p>

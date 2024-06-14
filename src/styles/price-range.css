@@ -27,7 +27,16 @@
   flex-direction: column;
   gap: 2.625rem;
 }
-#price-filter-section__top {
+
+.price-filter-section__top {
   display: flex;
   justify-content: space-between;
+  color: var(--gray-color-2);
+}
+
+
+/* Classes Dark Theme */
+.price-filter-section__top--dark h2,
+.price-filter-section__top--dark h3 {
+  color: var(--gray-color-7);
 }
