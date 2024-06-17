@@ -5,10 +5,9 @@ import { themeChange, themeCheck } from "./theme.js";
 import { getAlbumList } from "./api.js";
 
 async function routine() {
-  
   applyInputRangeStyle();
   renderCardItems(await getAlbumList());
-  priceFilter(await getAlbumList());
+  priceAndGenreFilter(await getAlbumList());
   themeCheck();
 }
 
@@ -24,7 +23,6 @@ function renderCardItems(albumList) {
 }
 
 function createAlbumCard(albumListItem) {
-  // criando tags
   let card = document.createElement("li");
   let cover = document.createElement("img");
   let name = document.createElement("h3");
@@ -35,18 +33,15 @@ function createAlbumCard(albumListItem) {
   let price = document.createElement("p");
   let buyButton = document.createElement("button");
 
-  // organizando tags
   cardTop.append(band, genre);
   cardBottom.append(price, buyButton);
   card.append(cover, name, cardTop, cardBottom);
 
-  // atribuindo classes
   card.classList.add("album-list__card");
   cardTop.classList.add("card-top");
   cardBottom.classList.add("card-bottom");
   buyButton.classList.add("buy-button");
 
-  // atribuindo conteúdo
   cover.src = albumListItem.img;
   name.innerText = albumListItem.title;
   band.innerText = albumListItem.band;
@@ -64,13 +59,23 @@ themeButton.addEventListener("click", (e) => {
   themeChange();
 });
 
-function priceFilter(list) {
+
+function priceAndGenreFilter(list) {
   let price = document.querySelector("#price");
   let rangeInput = document.querySelector("#range-input");
+  let albumsInSelectedGenre;
 
   rangeInput.addEventListener("input", () => {
+    let selectedGenre = document.querySelector('input[name="genre-radio"]:checked').value;
+
+    if (selectedGenre == "todos") {
+      albumsInSelectedGenre = list;
+    } else {
+      albumsInSelectedGenre = list.filter((element) => element.genre.toLowerCase() == selectedGenre);
+    }
+
     price.innerText = `R$ ${rangeInput.value}`;
-    let albumsInPriceRange = list.filter((element) => parseInt(element.price) <= rangeInput.value);
+    let albumsInPriceRange = albumsInSelectedGenre.filter((element) => parseInt(element.price) <= rangeInput.value);
 
     return renderCardItems(albumsInPriceRange);
   });
