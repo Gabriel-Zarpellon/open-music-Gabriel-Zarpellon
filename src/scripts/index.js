@@ -7,7 +7,7 @@ import { getAlbumList } from "./api.js";
 async function routine() {
   applyInputRangeStyle();
   renderCardItems(await getAlbumList());
-  priceAndGenreFilter(await getAlbumList());
+  priceFilter(await getAlbumList());
   themeCheck();
 }
 
@@ -60,23 +60,25 @@ themeButton.addEventListener("click", (e) => {
 });
 
 
-function priceAndGenreFilter(list) {
+function priceFilter(list) {
   let price = document.querySelector("#price");
   let rangeInput = document.querySelector("#range-input");
-  let albumsInSelectedGenre;
-
+  
   rangeInput.addEventListener("input", () => {
-    let selectedGenre = document.querySelector('input[name="genre-radio"]:checked').value;
-
-    if (selectedGenre == "todos") {
-      albumsInSelectedGenre = list;
-    } else {
-      albumsInSelectedGenre = list.filter((element) => element.genre.toLowerCase() == selectedGenre);
-    }
-
     price.innerText = `R$ ${rangeInput.value}`;
-    let albumsInPriceRange = albumsInSelectedGenre.filter((element) => parseInt(element.price) <= rangeInput.value);
+    let albumsInPriceRange = genreFilter(list).filter((element) => parseInt(element.price) <= rangeInput.value);
 
     return renderCardItems(albumsInPriceRange);
   });
+}
+
+function genreFilter(list){
+  let selectedGenre = document.querySelector('input[name="genre-radio"]:checked').value;
+  let albumsInSelectedGenre;
+
+  if (selectedGenre == "todos") {
+    return albumsInSelectedGenre = list;
+  } else {
+    return albumsInSelectedGenre = list.filter((element) => element.genre.toLowerCase() == selectedGenre);
+  }
 }
