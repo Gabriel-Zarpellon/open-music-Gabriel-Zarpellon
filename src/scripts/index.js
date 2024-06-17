@@ -2,11 +2,13 @@
 import { applyInputRangeStyle } from "./inputRange.js";
 import { albumList } from "./albumsDatabase.js";
 import { themeChange, themeCheck } from "./theme.js";
+import { getAlbumList } from "./api.js";
 
-function routine() {
+async function routine() {
+  
   applyInputRangeStyle();
-  renderCardItems(albumList);
-  priceFilter(albumList);
+  renderCardItems(await getAlbumList());
+  priceFilter(await getAlbumList());
   themeCheck();
 }
 
