@@ -19,7 +19,7 @@ header h1 {
   width: 2.75rem;
   height: 2.25rem;
   background-color: var(--gray-color-6);
-  background-image: url("./src/assets/icons/moon-icon.svg");
+  background-image: url("../assets/icons/moon-icon.svg");
   background-size: 35%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -38,5 +38,5 @@ header h1 {
 
 .theme-button--dark {
   background-color: var(--gray-color-3);
-  background-image: url("./src/assets/icons/sun-icon.svg");
+  background-image: url("../assets/icons/sun-icon.svg");
 }
